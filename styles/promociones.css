@@ -3,13 +3,13 @@
 :root {
   --primary-color: #2A2F35;
   --secondary-color: #999999;
-  --tercer-color: rgb(0, 0, 100);
+  --tercer-color: #666;
   --blue-mor: #05a8f4;
 }
 
 /*Promociones*/
 #parallax {
-  background-image: url('../img/bg-1.png');
+  background-image: url('../img/bg-promos-1.webp');
   height: 800px;
 }
 .container-parallax {
@@ -31,7 +31,7 @@
 .gradient {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(255, 192, 203, 0.67), #05a8f42d);
+  background: linear-gradient(var(--secondary-color), #05a8f42d);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@
 .more-info .btn-mas-info button{
   font-weight: 300;
   padding: 9px 25px;
-  background: #05a8f4;
+  background: var(--secondary-color);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -73,7 +73,7 @@
   position: relative;
   background-color: transparent;
   cursor: pointer;
-  border: 2px solid var(--blue-mor);
+  border: 2px solid var(--tercer-color);
   overflow: hidden;
   border-radius: 30px;
   color: #333;
@@ -90,7 +90,7 @@
   left: 0;
   top: 0;
   transition: all 0.5s ease-in-out;
-  background-color: var(--blue-mor);
+  background-color: var(--secondary-color);
   border-radius: 30px;
   visibility: hidden;
   height: 10px;
@@ -98,7 +98,7 @@
   z-index: -1;
 }
 .button:hover {
-  box-shadow: 1px 1px 200px var(--blue-mor);
+  box-shadow: 1px 1px 200px var(--primary-color);
   color: #fff;
   border: none;
 }
@@ -111,7 +111,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 60px 1rem;
+  padding: 60px;
+  gap: 1rem;
 }
 .promociones .promociones-grid {
   display: grid;
@@ -164,7 +165,7 @@
   color: #dbdbdb;
 }
 /*Media quieres*/
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .more-info h1 {
     font-size: 35px;
   }
@@ -178,7 +179,7 @@
     max-width: 500px;
   }
   .promociones .promociones-grid {
-    grid-template-columns: repeat(2, minmax(300px, 450px));
+    grid-template-columns: repeat(2, 1fr);
   }
   .faq details {
     width: 100%;
@@ -197,9 +198,13 @@
   }
 }
 @media (min-width: 1024px) {
+
+  .promociones {
+    padding: 20px;
+  }
+
   .promociones .promociones-grid {
-    grid-template-columns: repeat(4, minmax(300px, 400px));
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 70px;
-    column-gap: 40px;
   }
 }

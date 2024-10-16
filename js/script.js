@@ -1,13 +1,14 @@
 const swiper = new Swiper('.sample-slider', {
   loop: true,                         //loop
   autoplay: {                         //autoplay
-    delay: 2000,  
+    delay: 4000,  
     disableOnInteraction: false,
   },       
-  effect: 'fade',         // apply fade effect
-    fadeEffect: {           
-      crossFade: true     // resolve the overlapping of the slides
-  },
+  effect: 'coverflow',         // apply fade effect
+  //   fadeEffect: {           
+  //     crossFade: true     // resolve the overlapping of the slides
+  //   }
+  // ,
   navigation: {                       //navigation(arrow)
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

@@ -3,7 +3,7 @@
 :root {
   --primary-color: #2A2F35;
   --secondary-color: #999999;
-  --tercer-color: rgb(0, 0, 100);
+  --tercer-color: #666;
 }
 * {
   margin: 0;
@@ -26,7 +26,7 @@ p {
 /*EStilos header*/
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 100px;
   background-color: transparent;
@@ -35,9 +35,9 @@ p {
   right: 0;
   z-index: 11;
   width: 100%;
+  gap: 170px;
   transition: all 0.275s ease;
-  padding: 0 1rem;
-  max-width: 1400px;
+  max-width: 100%;
 }
 .header-1 {
   display: flex;
@@ -123,8 +123,9 @@ p {
 }
 .sample-slider img{
   width: 100%;
-  object-fit: cover;
-  height: 550px;
+  margin-top: 100px;
+  object-fit: contain;
+  height: auto;
 }
 .img-des {
   display: none;
@@ -171,7 +172,7 @@ p {
 .contacto span {
   width: 35px;
   height: 6px;
-  background-color: rgb(0, 0, 100);
+  background-color: var(--tercer-color);
   display: flex;
   border-radius: 3px;
   margin: 20px 0;
@@ -207,16 +208,20 @@ p {
   text-align: center;
 }
 .item-servicios h3 {
-  margin: 45px 0 30px 0;
+  margin: 25px 0 30px 0;
 }
 .item-servicios img {
-  width: 100%;
+  width: 80%;
 }
+.item-servicios p {
+  text-align: justify;
+}
+
 .servicios .btn-casos,
 .texto-testimonios a {
   padding: 20px 35px;
   color: white;
-  background-color: rgb(0, 0, 100);
+  background-color: var(--tercer-color);
   border-radius: 8px;
   margin-bottom: 10px;
   text-decoration: none;
@@ -224,7 +229,7 @@ p {
 }
 .servicios .btn-casos:hover, .texto-testimonios a:hover {
   transition: all 0.2s ease-in-out;
-  background-color: #25282b;
+  opacity: 0.7;
 }
 /*Estilos Nosotros*/
 .nosotros {
@@ -246,6 +251,7 @@ p {
   color: #b8b8b8;
 }
 .nosotros p {
+  color: #fff;
   text-align: justify;
 }
 .counter {
@@ -372,11 +378,12 @@ p {
 /*Fin Estilos Galería*/
 /*Estilos TEstimonios*/
 .container-testimonios {
-  background-image: url(../img/Slider/_MG_1489.png);
-  background-position: center center;
+  background-image: url(../img/bg-testim.webp);
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  margin-top: 100px;
 }
 .max-testi {
   display: flex;
@@ -458,7 +465,7 @@ p {
   flex-direction: column;
   text-align: center;
   padding: 90px 1rem;
-  max-width: 1200px;
+  max-width: 100%;
 }
 .contacto .texto-contacto {
   display: flex;
@@ -492,6 +499,14 @@ p {
   font-weight: bold;
   margin-bottom: 10px;
 }
+.datos-map {
+  width: 100%;
+  margin: 30px 0;
+}
+.map {
+  width: 100%;
+  height: 250px;
+}
 .consultorio{
   width: 100%;
   height: 100%;
@@ -510,7 +525,7 @@ p {
 }
 /*Footer*/
 .footer {
-  padding: 30px 1rem;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -542,7 +557,7 @@ p {
   color: var(--tercer-color);
 }
 .footer-1 {
-  padding: 10px 1rem;
+  padding: 30px 1rem;
   background-color: #000;
   text-align: center;
 }
@@ -576,7 +591,7 @@ p {
   right: 0;
 }
 .botones-flotantes #tel {
-  background-color: gray;
+  background-color: var(--tercer-color);
   color: white;
   position: absolute;
   bottom: 0;
@@ -586,20 +601,20 @@ p {
   background-color: #268353;
 }
 .botones-flotantes #tel:hover {
-  background-color: rgb(55, 55, 55);
+  background-color: var(--secondary-color);
 }
 .botones-flotantes img {
   width: 40px;
 }
 .botones-flotantes #menu-contacto {
-  background-color: #2973ba;
+  background-color: var(--tercer-color);
   z-index: 14;
   position: relative;
   width: 75px;
   height: 75px;
 }
 .botones-flotantes #menu-contacto:hover {
-  background-color: #1d5283;
+  background-color: var(--secondary-color);
 }
 .show-whats {
   right: 90px !important;
@@ -608,7 +623,7 @@ p {
   bottom: 90px !important;
 }
 /*Media Queries*/
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .header {
     position: relative;
   }
@@ -619,16 +634,29 @@ p {
     display: none;
   }
   .sample-slider img {
-    height: 800px;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .container-servicios {
+    width: 100%;
+    padding: 0;
   }
   .servicios {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, fr);
     place-content: center;
-    align-items: baseline;
+    align-items: start;
+    width: 100%;
+  }
+  .item-servicios img {
+    width: 90%;
   }
   .servicios .btn-casos {
+    width: 50%;
+    text-align: center;
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 4;
   }
   .detalles {
     flex-direction: row;
@@ -653,10 +681,19 @@ p {
   .container-contacto {
     max-width: 450px;
   }
+  .datos-map {
+    width: 100%;
+    margin: 50px 0;
+  }
+  .map {
+    width: 80%;
+    height: 450px;
+  }
   .swiper-container-1 {
     width: 100%;
   }
   .footer {
+    padding: 40px 0;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -683,20 +720,26 @@ p {
     color: #000;
     padding: 10px 15px;
     font-size: 20px;
-    transition: all 0.275s ease-in;
+    transition: all 10ms ease-in-out;
   }
-  .menu-desktop a[href='tel:6255890381'] {
+  /* Antes el de mor */
+/* 6255890381 */
+  /* Después el de prosthetica */
+/*  8128822146 */
+  .menu-desktop a:hover {
+    cursor: pointer;
+    color: var(--tercer-color);
+  }
+
+  .menu-desktop a[href='tel:8128822146'] {
     padding: 10px 15px;
-    background-color: #2973ba;
+    background-color: var(--secondary-color);
     border-radius: 50px;
     color: white;
+    transition: all 0.275s ease-in;
   }
   .menu-desktop a:hover {
-    padding: 10px 15px;
-    background-color: #2973ba;
-    border-radius: 50px;
-    transition: all 0.275s ease-in;
-    color: white;
+    opacity: 0.7;
   }
   .menu-desktop a[href='tel:6255890381']:hover {
     background-color: #2A2F35;
@@ -708,6 +751,13 @@ p {
   }
   .img-des {
     display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nosotros-max .img-des {
+    height: 100vh;
   }
   .img-mov {
     display: none;
@@ -720,22 +770,31 @@ p {
     font-size: 25px;
   }
   .container-nosotros img {
-    width: 50%;
+    height: 100%;
+    max-height: 100%;
   }
   .nosotros-max {
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 40%;
     align-items: center;
+    justify-items: center;
   }
   .nosotros {
     padding: 60px 3rem 60px 1rem;
+    text-align: center;
+  }
+  .nosotros p {
+    text-align: justify;
   }
   .detalles .item-detalles {
     height: 200px;
   }
   .galeria-casos {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .container-testimonios {
+    margin-top: 200px;
   }
   .testimonios {
     max-width: 1200px;
