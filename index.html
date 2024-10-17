@@ -9,10 +9,6 @@
   <link rel="stylesheet" href="/styles/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <!-- <meta
-      property="og:image"
-      content="https://morcentrodental.com/img/logo/favicon.png"
-    /> -->
   <meta name="description"
     content="Página web de mör centro dental, tu destino para una atención dental excepcional y personalizada. En nuestra clínica, nos enorgullece ofrecer una experiencia dental integral que prioriza tu comodidad, salud y confianza." />
   <link rel="shortcut icon" href="img/logo/logo-prosthetica-square.png" type="image/x-icon" />
@@ -66,6 +62,7 @@
       </a>
     </div>
   </nav>
+
   <div class="swiper sample-slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -79,10 +76,40 @@
     </div>
   </div>
 
+  <section class="container-videos-presentation">
+    <div class="container-videos--img">
+      <img src="./img/img-presentation-1.jpg" alt="mascarilla dental">
+    </div>
+    <div class="swiper videos-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide-video">
+          <video src="./video/video-presentation-1.mp4" autoplay controls loop class="video-presentation"></video>
+        </div>
+        <div class="swiper-slide swiper-slide-video">
+          <video src="./video/video-presentation-2.mp4" autoplay controls loop class="video-presentation"></video>
+        </div>
+        <div class="swiper-slide swiper-slide-video">
+          <video src="./video/video-presentation-3.mp4" autoplay controls loop class="video-presentation"></video>
+        </div>
+      </div>
+
+
+      <div class="swiper-button-prev prev-videos"></div>
+      <div class="swiper-button-next next-videos"></div>
+    </div>
+  </section>
+
   <section class="container-servicios" id="Servicios">
+    <div class="servicios-summary">
+      <h2>Servicios</h2>
+      <p>
+        En PROSTHETICA contamos con una completa gama de servicios
+        para cuidar y mejorar tu salud bucal. <br>
+        Desde procedimientos estéticos preventivos hasta preventivos, tales como:
+      </p>
+    </div>
     <div class="servicios">
-      <div class="item-servicios">
-        <img src="img/carillas-porcelana.webp" alt="Implante" />
+      <div class="item-servicios" data-modal="modal-services-1">
         <h3>Carillas de Porcelana</h3>
         <p>
           Perfectas para mejorar la apariencia de tu sonrisa
@@ -91,30 +118,116 @@
           estructurales.
         </p>
       </div>
-      <div class="item-servicios">
-        <img src="img/carillas-porcelana-2.webp" alt="Estética" />
+      <div class="item-servicios" data-modal="modal-services-2">
+        <!-- <img src="img/carillas-porcelana-2.webp" alt="Estética" /> -->
         <h3>Implantes Dentales</h3>
         <p>
-          Para los pacientes que han perdido alguna pieza o quieren volver a recuperar la funcionalidad de su boca, los implantes dentales son la mejor solución.
+          Para los pacientes que han perdido alguna pieza o quieren volver a recuperar la funcionalidad de su boca,
+          los implantes dentales son la mejor solución.
         </p>
       </div>
-      <div class="item-servicios">
-        <img src="img/carillas-porcelana-3.webp" alt="Ortodoncia" />
-        <h3>Contorneo</h3>
+      <div class="item-servicios" data-modal="modal-services-3">
+        <!-- <img src="img/carillas-porcelana-3.webp" alt="Ortodoncia" /> -->
+        <h3>Recontorneo</h3>
         <p>
           Permite dar forma y perfeccionar la forma de los dientes para una sonrisa más equilibrada.
         </p>
       </div>
-      <div class="item-servicios">
-        <img src="img/carillas-porcelana-3.webp" alt="Ortodoncia" />
-        <h3>Blanqueamientos</h3>
+      <div class="item-servicios" data-modal="modal-services-4">
+        <!-- <img src="img/carillas-porcelana-3.webp" alt="Ortodoncia" /> -->
+        <h3>Blanqueamiento</h3>
         <p>
-          Renueva tu sonrisa eliminando manchas de comida, bebidas o el paso del tiempo. 
+          Renueva tu sonrisa eliminando manchas de comida, bebidas o el paso del tiempo.
         </p>
       </div>
+      <div class="item-servicios" data-modal="modal-services-5">
+        <!-- <img src="img/carillas-porcelana.webp" alt="Implante" /> -->
+        <h3>Endodoncia</h3>
+        <p>
+          Salvamos tus dientes de infecciones internas, aliviando el dolor y evitando extracciones innecesarias.
+        </p>
+      </div>
+      <div class="item-servicios" data-modal="modal-services-6">
+        <!-- <img src="img/carillas-porcelana-3.webp" alt="Ortodoncia" /> -->
+        <h3>Extracción</h3>
+        <p>
+          Priorizamos tu comodidad y salud realizando extracciones de forma segura y sin dolor.
+        </p>
+      </div>
+
       <a href="#Casos" class="btn-casos">Casos de Éxito</a>
     </div>
   </section>
+
+  <!-- Modales Servicios -->
+  <section>
+    <dialog id="modal-services-1">
+      <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <h2>Carillas de Porcelana</h2>
+        <div class="modal-images">
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-services-2">
+      <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <h2>Implantes Dentales</h2>
+        <div class="modal-images">
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-services-3">
+      <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <h2>Recontorneo</h2>
+        <div class="modal-images">
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-services-4">
+      <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <h2>Blanqueamiento</h2>
+        <div class="modal-images">
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-services-5">
+      <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <h2>Endodoncia</h2>
+        <div class="modal-images">
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="modal-services-6">
+      <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <h2>Extracción</h2>
+        <div class="modal-images">
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+          <img src="img/carillas-porcelana.webp" alt="Implante" />
+        </div>
+      </div>
+    </dialog>
+  </section>
+
   <section class="container-nosotros" id="Nosotros">
     <div class="nosotros-max">
       <div class="nosotros">
@@ -147,14 +260,14 @@
         <h3>Creamos la mejor versión de ti</h3>
         <div class="contador">
           <i class="bi bi-emoji-smile"></i>
-          <h2 class="count_amount" data-cantidad-total="40000">0</h2>
+          <h2 class="count_amount" data-cantidad-total="40000">200</h2>
         </div>
         <p>Sonrisas Creadas</p>
       </div>
       <div class="item-counter">
         <div>
           <i class="bi bi-person-circle"></i>
-          <h2 class="count_amount" data-cantidad-total="1000">0</h2>
+          <h2 class="count_amount" data-cantidad-total="1000">200</h2>
         </div>
         <p>Clientes Satisfechos</p>
       </div>
@@ -327,21 +440,21 @@
           Río Sena 317, Del Valle, 66220 San Pedro Garza García, N.L.
         </h2>
       </a>
-      <a class="container-datos" href="https://maps.app.goo.gl/qjrtyJLpjGG2Km52A">
+      <a class="container-datos" href="https://maps.app.goo.gl/qjrtyJLpjGG2Km52A" target="_blank">
         <i class="bi bi-clock"></i>
         <h5>Horario</h5>
         <ul>
           <li>
-            Lunes a Viernes: 
+            Lunes, Miércoles, Jueves, Viernes:
           </li>
           <li>
             10 a.m. – 6 p.m.
           </li>
           <li>
-            Sábado: 
+            Martes y Sábado:
           </li>
           <li>
-            10 a.m. – 2 p.m.
+            10 a.m. – 1 p.m.
           </li>
           <li>Domingo: Cerrado</li>
         </ul>
@@ -349,8 +462,7 @@
       <div class="datos-map">
         <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.5667132664394!2d-100.3653776!3d25.6525022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb10e398469ce375%3A0x2c774489a97ebdb1!2sProsthetica%20Smile%20%26%20Implants!5e0!3m2!1ses-419!2smx!4v1729104680173!5m2!1ses-419!2smx"
-          style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <!-- Swiper -->
       <div class="swiper-container-1">
@@ -412,6 +524,7 @@
     </a>
   </div>
   <script src="js/script.js"></script>
+  <script src="js/modalServices.js"></script>
 </body>
 
 </html>

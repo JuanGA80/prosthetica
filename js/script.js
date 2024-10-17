@@ -9,14 +9,24 @@ const swiper = new Swiper('.sample-slider', {
   //     crossFade: true     // resolve the overlapping of the slides
   //   }
   // ,
+
+})
+
+const swiperVideos = new Swiper('.videos-slider', {
+  loop: true,                         //loop
+  spaceBetween: 30,
+  effect: 'coverflow',         // apply fade effect
+  //   fadeEffect: {           
+  //     crossFade: true     // resolve the overlapping of the slides
+  //   }
+  // ,
   navigation: {                       //navigation(arrow)
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  pagination: {                       //pagination(dots)
-    el: '.swiper-pagination',
-  },
 })
+
+
 const swiper1 = new Swiper('.sample-slider-1', {
   loop: true, 
   spaceBetween: 30,                        //loop
