@@ -138,6 +138,7 @@ p {
 .sample-slider {
   width: 100%;
   position: relative;
+  display: none;
 }
 
 .sample-slider img {
@@ -166,6 +167,7 @@ p {
 .container-videos-presentation {
   width: 100%;
   padding: 25px 0;
+  margin-top: 70px;
 }
 
 .container-videos--img {
@@ -200,8 +202,22 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
+
+/* Banner Movil */
+
+.sample-slider-movil {
+  width: 100%;
+  position: relative;
+}
+
+.sample-slider-movil img {
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+
 
 /*  */
 .hero {
@@ -263,6 +279,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+
 .servicios-summary {
   width: 100%;
   display: flex;
@@ -315,14 +332,8 @@ p {
 }
 
 
-
 .item-servicios img {
-  width: 80%;
-}
-
-.item-servicios p {
-  text-align: justify;
-  width: 80%;
+  width: 30%;
 }
 
 .servicios .btn-casos,
@@ -360,6 +371,7 @@ dialog::backdrop {
 }
 
 dialog {
+  width: 80%;
   border-radius: 15px;
   border: none;
   position: fixed;
@@ -373,7 +385,7 @@ dialog {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap:10px;
+  gap: 15px;
 }
 
 .close-button {
@@ -395,8 +407,8 @@ dialog {
   gap: 10px;
 }
 
-.modal-content img{
-  width: 100%;
+.modal-images p {
+  text-align: justify;
 }
 
 /*Estilos Nosotros*/
@@ -720,6 +732,23 @@ dialog {
 .datos-map {
   width: 100%;
   margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.map-item a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .map {
@@ -936,10 +965,31 @@ dialog {
 
   /*  */
 
-  .sample-slider img {
-    margin-top: 0;
-    height: auto;
+  /*Estilos Hero*/
+  .sample-slider {
+    width: 100%;
+    display: block;
   }
+
+  .sample-slider img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .img-des {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    margin: 0 auto;
+  }
+
 
   /* section videos */
   .container-videos-presentation {
@@ -995,6 +1045,22 @@ dialog {
 
   }
 
+  /* Banner Movil */
+
+  .sample-slider-movil {
+    width: 100%;
+    position: relative;
+    display: none;
+  }
+
+  .sample-slider-movil img {
+    width: 100%;
+    margin-top: 100px;
+    object-fit: contain;
+    height: auto;
+  }
+
+
 
   /* Servicios */
 
@@ -1029,7 +1095,7 @@ dialog {
   }
 
   .item-servicios img {
-    width: 90%;
+    width: 40%;
   }
 
   .servicios .btn-casos {
@@ -1043,16 +1109,25 @@ dialog {
 
   /* Modales Servicios */
 
+  .modal-content {
+    box-sizing: border-box;
+    padding: 50px;
+  }
+
   .modal-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
-  .modal-content img{
-    width: 100%;
+
+  .modal-content h2 {
+    font-size: 30px;
   }
-  
+
+  .modal-content p {
+    font-size: 25px;
+  }
+
 
   /*  */
   .detalles {
@@ -1089,16 +1164,50 @@ dialog {
     max-width: 450px;
   }
 
+  /*  */
+
   .datos-map {
     width: 100%;
-    margin: 50px 0;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .datos-map h5{
+    font-size: 30px;
+  }
+
+  .datos-map i {
+    font-size: 30px;
+  }
+
+  .maps-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .map-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    height: 480px;
+  }
+  
+  .map-item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
   }
 
   .map {
-    width: 80%;
-    height: 450px;
+    height: 350px;
   }
 
+  /*  */
   .swiper-container-1 {
     width: 100%;
   }
@@ -1169,7 +1278,7 @@ dialog {
   /*  */
 
   .sample-slider img {
-    height: 700px;
+    height: auto;
   }
 
   .img-des {

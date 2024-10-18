@@ -9,7 +9,19 @@ const swiper = new Swiper('.sample-slider', {
   //     crossFade: true     // resolve the overlapping of the slides
   //   }
   // ,
+})
 
+const swiperSliderMovil = new Swiper('.sample-slider-movil', {
+  loop: true,                         
+  autoplay: {                         
+    delay: 4000,  
+    disableOnInteraction: false,
+  },       
+  effect: 'coverflow',           
+  //   fadeEffect: {           
+  //     crossFade: true     
+  //   }
+  // ,
 })
 
 const swiperVideos = new Swiper('.videos-slider', {
