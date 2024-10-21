@@ -106,7 +106,8 @@
     height: 100%;
     border: 3px #272728 solid;
   }
-  .foto-1 {
+
+  /* .foto-1 {
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -119,8 +120,8 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-  }
-  .foto-4 {
+  } */
+  /* .foto-4 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -137,5 +138,5 @@
   .foto-10 {
     grid-column-start: 1;
     grid-column-end: 4;
-  }
+  } */
 }

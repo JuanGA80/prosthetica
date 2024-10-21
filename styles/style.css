@@ -994,55 +994,68 @@ dialog {
   /* section videos */
   .container-videos-presentation {
     width: 100%;
-    padding: 25px 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-columns: 58% 40%;
+    align-items: start;
+    justify-content: space-between;
+    box-sizing: border-box;
   }
 
-  .container-videos--img {
+  .container-videos--img{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  .container-videos--img img {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
+
+  .videos--img {
+    width: 49%;
+    height: 49%;
+    object-fit: cover;
   }
+
+
+
 
   .videos-slider {
-    width: 90%;
+    width: 100%;
+    padding: 0;
+    height: auto;
+    object-fit: cover;
   }
 
   .videos-slider .swiper-slide-video {
-    width: 50%;
+    width: 100%;
     padding: 0;
     box-sizing: border-box;
   }
 
   .container-videos-presentation .swiper-slide-video {
     height: auto;
-    width: 50%;
+    width: 100%;
+    padding: 0;
   }
 
   .video-presentation {
-    width: 50%;
+    width: 100%;
+    padding: 0;
     height: auto;
   }
 
   .prev-videos:after,
   .next-videos:after {
-    color: #000 !important;
+    color: #fff !important;
     font-size: 40px !important;
   }
 
   .swiper-slide-video.swiper-slide-active {
+    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-
+    padding: 0;
   }
 
   /* Banner Movil */
@@ -1074,7 +1087,7 @@ dialog {
   }
 
   .servicios-summary h2 {
-    font-size: 72px;
+    font-size:30px;
   }
 
   .servicios-summary p {
@@ -1095,7 +1108,11 @@ dialog {
   }
 
   .item-servicios img {
-    width: 40%;
+    width: 15%;
+  }
+
+  .item-servicios h3 {
+    font-size: 20px;
   }
 
   .servicios .btn-casos {
@@ -1281,15 +1298,8 @@ dialog {
     height: auto;
   }
 
-  .img-des {
-    display: block;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-  }
-
   .nosotros-max .img-des {
-    height: 100vh;
+    width: 80%;
   }
 
   .img-mov {
@@ -1305,7 +1315,7 @@ dialog {
   }
 
   .item-servicios h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .container-nosotros img {
@@ -1316,9 +1326,11 @@ dialog {
   .nosotros-max {
     width: 100%;
     display: grid;
-    grid-template-columns: 55% 40%;
-    align-items: center;
+    grid-template-columns: 60% 30%;
+    align-items: start;
     justify-items: center;
+    padding: 40px 0;
+    gap: 0;
   }
 
   .nosotros {
@@ -1327,7 +1339,7 @@ dialog {
   }
 
   .nosotros p {
-    text-align: justify;
+    text-align: center;
   }
 
   .detalles .item-detalles {
